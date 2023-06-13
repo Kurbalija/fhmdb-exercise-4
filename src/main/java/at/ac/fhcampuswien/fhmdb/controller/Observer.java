@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.fhmdb.controllers;
+package at.ac.fhcampuswien.fhmdb.controller;
 
 public interface Observer {
     void update(Object arg);

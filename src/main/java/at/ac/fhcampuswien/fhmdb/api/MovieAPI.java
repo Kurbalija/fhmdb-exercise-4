@@ -1,7 +1,7 @@
 package at.ac.fhcampuswien.fhmdb.api;
 
-import at.ac.fhcampuswien.fhmdb.models.Genre;
-import at.ac.fhcampuswien.fhmdb.models.Movie;
+import at.ac.fhcampuswien.fhmdb.model.Genre;
+import at.ac.fhcampuswien.fhmdb.model.Movie;
 import okhttp3.*;
 import com.google.gson.Gson;
 import java.util.Arrays;

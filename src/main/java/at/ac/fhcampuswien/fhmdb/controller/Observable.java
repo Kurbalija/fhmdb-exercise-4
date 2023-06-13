@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.fhmdb.controllers;
+package at.ac.fhcampuswien.fhmdb.controller;
 
 public interface Observable {
     void addObserver(Observer o);
