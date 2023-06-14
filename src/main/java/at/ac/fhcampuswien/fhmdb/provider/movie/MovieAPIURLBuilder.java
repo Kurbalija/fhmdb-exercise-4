@@ -11,22 +11,26 @@ public class MovieAPIURLBuilder {
     }
 
     public MovieAPIURLBuilder query(String query) {
-        this.urlBuilder.addQueryParameter("query", query);
+        if(query != null)
+            this.urlBuilder.addQueryParameter("query", query);
         return this;
     }
 
     public MovieAPIURLBuilder genre(String genre) {
-        this.urlBuilder.addQueryParameter("genre", genre);
+        if(genre != null)
+            this.urlBuilder.addQueryParameter("genre", genre);
         return this;
     }
 
     public MovieAPIURLBuilder releaseYear(String year) {
-        this.urlBuilder.addQueryParameter("releaseYear", year);
+        if(year != null)
+            this.urlBuilder.addQueryParameter("releaseYear", year);
         return this;
     }
 
     public MovieAPIURLBuilder ratingFrom(String rating) {
-        this.urlBuilder.addQueryParameter("ratingFrom", rating);
+        if(rating != null)
+            this.urlBuilder.addQueryParameter("ratingFrom", rating);
         return this;
     }
 
