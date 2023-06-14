@@ -31,14 +31,10 @@ public class MovieAPI implements MovieProvider {
         MovieAPIURLBuilder builder = new MovieAPIURLBuilder(BASE_URL + ENDPOINT_MOVIES);
 
         if(queryMap != null){
-            for (String key: queryMap.keySet()) {
-                switch (key) {
-                    case "query" -> builder.query(queryMap.get(key));
-                    case "genre" -> builder.genre(queryMap.get(key));
-                    case "releaseYear" -> builder.releaseYear(queryMap.get(key));
-                    case "ratingFrom" -> builder.ratingFrom(queryMap.get(key));
-                }
-            }
+            builder.query(queryMap.get("query"));
+            builder.genre(queryMap.get("genre"));
+            builder.releaseYear(queryMap.get("releaseYear"));
+            builder.ratingFrom(queryMap.get("ratingFrom"));
         }
 
         return requestMovieList(builder.build());
