@@ -13,10 +13,10 @@ public class FhmdbApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         ControllerFactory factory = new ControllerFactory();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/home-view.fxml"));
         fxmlLoader.setControllerFactory(factory);
         Scene scene = new Scene(fxmlLoader.load(), 910, 620);
-        scene.getStylesheets().add(Objects.requireNonNull(FhmdbApplication.class.getResource("styles.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(FhmdbApplication.class.getResource("/styles.css")).toExternalForm());
         stage.setTitle("FHMDb");
         stage.setScene(scene);
         stage.show();
