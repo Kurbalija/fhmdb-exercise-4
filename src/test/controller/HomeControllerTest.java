@@ -39,7 +39,7 @@ public class HomeControllerTest {
     }
 
     @Test
-    public void isGetMoviesBetweenYears_2020_2021_2() {
+    public void isNum_GetMoviesBetweenYears_2020_2021_2() {
         List<Movie> moviesBetweenYears = controller.getMoviesBetweenYears(movies, 2020, 2021);
         assertEquals(2, moviesBetweenYears.size());
         assertTrue(moviesBetweenYears.contains(movies.get(0)));
