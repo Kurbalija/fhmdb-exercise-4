@@ -4,7 +4,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 
-public class ExceptionAlert {
+public class ExceptionAlert
+{
     public static void show(Exception e){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("An error occurred!");
