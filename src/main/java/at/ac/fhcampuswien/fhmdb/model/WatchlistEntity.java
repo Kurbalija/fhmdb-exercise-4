@@ -50,7 +50,7 @@ public class WatchlistEntity {
         // ORMLite needs a no-arg constructor
     }
 
-    public WatchlistEntity(at.ac.fhcampuswien.fhmdb.model.Movie movie) {
+    public WatchlistEntity(Movie movie) {
         this.apiId = movie.getId();
         this.imgUrl = movie.getImgUrl();
         this.title = movie.getTitle();
