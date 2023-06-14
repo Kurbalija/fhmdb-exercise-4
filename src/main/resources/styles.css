@@ -15,6 +15,10 @@
     -fx-text-fill: #f5c518;
 }
 
+.background-orange {
+    -fx-background-color: #ff9900;
+}
+
 .text-white {
     -fx-text-fill: #ffffff;
 }
@@ -37,12 +41,4 @@
 .filter-combo-box {
     -fx-background-color: white;
     -fx-text-fill: #ffffff;
-}
-
-.jfx-hamburger {
-    -fx-background-color: black;
-}
-
-.jfx-hamburger StackPane {
-    -fx-background-color: white;
 }
