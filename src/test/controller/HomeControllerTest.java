@@ -21,28 +21,40 @@ public class HomeControllerTest {
     );
 
     @Test
-    public void getMostPopularActor() {
+    public void isGetMostPopularActor_Actor_1() {
         String mostPopularActor = controller.getMostPopularActor(movies);
         assertEquals("Actor 1", mostPopularActor);
     }
 
     @Test
-    public void getLongestMovieTitle() {
+    public void isGetLongestMovieTitle_12() {
         int longestTitleLength = controller.getLongestMovieTitle(movies);
         assertEquals(12, longestTitleLength);
     }
 
     @Test
-    public void countMoviesFrom() {
+    public void isCountMoviesFrom_director1_2() {
         long moviesFromDirector1 = controller.countMoviesFrom(movies, "Director 1");
         assertEquals(2, moviesFromDirector1);
     }
 
     @Test
-    public void getMoviesBetweenYears() {
+    public void isGetMoviesBetweenYears_2020_2021_2() {
         List<Movie> moviesBetweenYears = controller.getMoviesBetweenYears(movies, 2020, 2021);
         assertEquals(2, moviesBetweenYears.size());
         assertTrue(moviesBetweenYears.contains(movies.get(0)));
+        assertTrue(moviesBetweenYears.contains(movies.get(2)));
+    }
+
+    @Test
+    public void doesGetMoviesBetweenYears_2020_2021_contains_first_movie() {
+        List<Movie> moviesBetweenYears = controller.getMoviesBetweenYears(movies, 2020, 2021);
+        assertTrue(moviesBetweenYears.contains(movies.get(0)));
+    }
+
+    @Test
+    public void doesGetMoviesBetweenYears_2020_2021_contains_second_movie() {
+        List<Movie> moviesBetweenYears = controller.getMoviesBetweenYears(movies, 2020, 2021);
         assertTrue(moviesBetweenYears.contains(movies.get(2)));
     }
 }
